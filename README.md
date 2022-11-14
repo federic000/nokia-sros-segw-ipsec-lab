@@ -11,13 +11,13 @@ _"The border between the security domains is protected by Security Gateways (SEG
 3. Releases: SR-OS 22.10.R1 and SRL 22.6.4  
 4. [IXIA-C-One](https://github.com/orgs/open-traffic-generator/packages/container/package/ixia-c-one) is also used to generate GTP traffic and send it across the SeGW cluster 
 5. OTG API's allows for generate any kind of traffic with [snappi](https://github.com/open-traffic-generator/snappi), here GTPv1 is modeled to simulate typical RAN traffic.
-6. Main purpose of the lab is to explain new MC-IPsec N:M functionality that allows for the deployment of SeGW clusters, while offering full stateful redudancy. 
+6. Main purpose of the lab is to explain new MC-IPsec N:M functionality that allows for the deployment of SeGW clusters, while offering full stateful redundancy for the IPSec tunnels. 
 
-A diagram to provide an overview of the setup is shown here: 
+A diagram of the setup is shown here: 
 
 ![a diagram is provided for reference](./docs/n2m_lab1.png)
 
 
 
 
-## more detailed instructions will follow, stay tuned! 
+## detailed instructions will follow, stay tuned! 
