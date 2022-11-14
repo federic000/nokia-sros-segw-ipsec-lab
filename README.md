@@ -13,4 +13,11 @@ _"The border between the security domains is protected by Security Gateways (SEG
 5. OTG API's allows for generate any kind of traffic with [snappi](https://github.com/open-traffic-generator/snappi), here GTPv1 is modeled to simulate typical RAN traffic.
 6. Main purpose of the lab is to explain new MC-IPsec N:M functionality that allows for the deployment of SeGW clusters, while offering full stateful redudancy. 
 
-more detailed instructions will follow, stay tuned! 
+A diagram to provide an overview of the setup is shown here: 
+
+![a diagram is provided for reference](./docs/n2m_lab1.png)
+
+
+
+
+## more detailed instructions will follow, stay tuned! 
