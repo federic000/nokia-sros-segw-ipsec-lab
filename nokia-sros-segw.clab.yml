@@ -6,12 +6,15 @@ topology:
     srl1:
       kind: srl
       image: ghcr.io/nokia/srlinux
+      startup-config: ./configs/srl1.cfg
     srl2:
       kind: srl
       image: ghcr.io/nokia/srlinux
+      startup-config: ./configs/srl2.cfg
     srl3:
       kind: srl
       image: ghcr.io/nokia/srlinux
+      startup-config: ./configs/srl3.cfg
 
     sros1:
       kind: vr-sros
