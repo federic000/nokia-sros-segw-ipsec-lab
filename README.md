@@ -2,7 +2,8 @@
 
 what's a __SeGW__ is defined by 3GPP within the TS 33.210 specification. 
 
-_"The border between the security domains is protected by Security Gateways (SEGs).The SEGs are responsible for enforcing the security policy of a security domain towards other SEGs in the destination security domain."_ In essence, it's the IPSec termination point for the secured RAN traffic on 4G and 5G networks. 
+_"The border between the security domains is protected by Security Gateways (SEGs).The SEGs are responsible for enforcing the security policy of a security domain towards other SEGs in the destination security domain."_ 
+In essence, SeGW is the IPSec termination point for the secured RAN traffic on 4G and 5G networks.  
 
 ## Lab info 
 
@@ -45,7 +46,7 @@ For all the nodes, SR-OS and SRL configuration is already provided at startup. S
 
 ### Traffic generation 
 
-1. check required mac addresses by running the script `./otg-retrieve-mac-addresses.sh`
+1. check required mac addresses by running the script `./otg-retrieve-mac-addresses.sh`, it uses gNMIc to retrieve hw-mac-addresses. 
 2. execute the suggested command line as `./otg-gtpv1-upanddown_v0.py 15000 30000 243 980 100 200 180 52:54:00:b6:3e:03 1A:EF:11:FF:00:05`
 
 
