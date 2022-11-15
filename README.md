@@ -21,4 +21,15 @@ A diagram of the setup is shown here:
 
 
 
-## detailed instructions will follow. 
+### General setup 
+
+### Deploying the lab 
+
+### Accessing the network elements 
+
+### Configuration  
+
+### High availability testing 
+
+### Traffic generation 
+
