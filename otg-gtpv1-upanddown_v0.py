@@ -133,11 +133,11 @@ def wait_for(func, timeout, interval=0.33):
     stopper()
     return False
 
-def main(total_packets_up, total_packets_down, size_up, size_down, pps_up, pps_down, max_ela_time):
+def main(total_packets_up, total_packets_down, size_up, size_down, pps_up, pps_down, max_ela_time, mac_addr_up, mac_addr_down):
     ## upstream MAC addres of port 1/1/3 SeGW4-Helper node. 
-    upstreamflow("52:54:00:f4:d5:03", size_up, pps_up, total_packets_up)
+    upstreamflow(mac_addr_up, size_up, pps_up, total_packets_up)
     ## downstream MAC address of port e1/5 of SRL3
-    downstreamflow("1A:0A:11:FF:00:05", size_down, pps_down, total_packets_down)
+    downstreamflow(mac_addr_down, size_down, pps_down, total_packets_down)
     api.set_config(config) #push flows to ixia-c 
     transmitter() #start transmitting flows
     print("{:_<12} {:_<12} {:_<12} {:_<8} {:_<12} {:_<8} :: {:_<12} {:_<12} {:_<12} {:_<8} {:_<12} {:_<8}".format \
@@ -148,9 +148,10 @@ def main(total_packets_up, total_packets_down, size_up, size_down, pps_up, pps_d
 if __name__ == "__main__":
     # input reads 7 args(integers) as tot packets up, tot packets down, packet_size for up and down, pps rate for up and down, max elapsed time
     n = len(sys.argv)
-    if n != 8: 
-       print ("7 args required : tot packets up, tot packets down, packet_size for up and down, pps rate for up and down, max elapsed time (all INTEGERS) \n")
-       print ("e.g. : %s 1500 30000 243 980 100 200 180 \n" % sys.argv[0])  
+    if n != 10: 
+       print ("Nine (9) args required : tot packets up, tot packets down, packet_size for up and down, pps rate for up and down, max elapsed time (all INTEGERS), MACADDR1, MACADDR2 ")
+       print ("Where MACADDR1 = MAC addres of port 1/1/3 on SeGW4-Helper, MACADDR2 = MAC address of port e1/5 on SRL3 \n") 
+       print ("e.g. : %s 1500 30000 243 980 100 200 180 CA:FE:00:00:BA:F0 CA:FE:11:22:BA:F0 \n" % sys.argv[0])  
        sys.exit() 
     print("\n args passed ->", end = " ")
     for i in range(1, n):
@@ -159,6 +160,6 @@ if __name__ == "__main__":
     # the setup of ixia-c api channel
     api = snappi.api(location='https://clab-segw-sros-01-ixia-c')
     config = api.config()
-    main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), int(sys.argv[7]))
+    main(int(sys.argv[1]), int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]), int(sys.argv[6]), int(sys.argv[7]), str(sys.argv[8]), str(sys.argv[9]))
 
 
