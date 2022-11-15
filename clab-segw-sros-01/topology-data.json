@@ -1,0 +1,1023 @@
+{
+  "name": "segw-sros-01",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-67dc84bbab5a",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "bridge-tg": {
+      "index": "0",
+      "shortname": "bridge-tg",
+      "longname": "clab-segw-sros-01-bridge-tg",
+      "fqdn": "bridge-tg.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridge-tg",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridge-tg",
+        "clab-node-name": "bridge-tg",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridge-tg2": {
+      "index": "1",
+      "shortname": "bridge-tg2",
+      "longname": "clab-segw-sros-01-bridge-tg2",
+      "fqdn": "bridge-tg2.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridge-tg2",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridge-tg2",
+        "clab-node-name": "bridge-tg2",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgea": {
+      "index": "2",
+      "shortname": "bridgea",
+      "longname": "clab-segw-sros-01-bridgea",
+      "fqdn": "bridgea.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgea",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgea",
+        "clab-node-name": "bridgea",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgeb": {
+      "index": "3",
+      "shortname": "bridgeb",
+      "longname": "clab-segw-sros-01-bridgeb",
+      "fqdn": "bridgeb.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgeb",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgeb",
+        "clab-node-name": "bridgeb",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgec": {
+      "index": "4",
+      "shortname": "bridgec",
+      "longname": "clab-segw-sros-01-bridgec",
+      "fqdn": "bridgec.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgec",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgec",
+        "clab-node-name": "bridgec",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridged": {
+      "index": "5",
+      "shortname": "bridged",
+      "longname": "clab-segw-sros-01-bridged",
+      "fqdn": "bridged.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridged",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridged",
+        "clab-node-name": "bridged",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgee": {
+      "index": "6",
+      "shortname": "bridgee",
+      "longname": "clab-segw-sros-01-bridgee",
+      "fqdn": "bridgee.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgee",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgee",
+        "clab-node-name": "bridgee",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgef": {
+      "index": "7",
+      "shortname": "bridgef",
+      "longname": "clab-segw-sros-01-bridgef",
+      "fqdn": "bridgef.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgef",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgef",
+        "clab-node-name": "bridgef",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgeg": {
+      "index": "8",
+      "shortname": "bridgeg",
+      "longname": "clab-segw-sros-01-bridgeg",
+      "fqdn": "bridgeg.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgeg",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgeg",
+        "clab-node-name": "bridgeg",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgei": {
+      "index": "9",
+      "shortname": "bridgei",
+      "longname": "clab-segw-sros-01-bridgei",
+      "fqdn": "bridgei.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgei",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgei",
+        "clab-node-name": "bridgei",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgej": {
+      "index": "10",
+      "shortname": "bridgej",
+      "longname": "clab-segw-sros-01-bridgej",
+      "fqdn": "bridgej.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgej",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgej",
+        "clab-node-name": "bridgej",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgek": {
+      "index": "11",
+      "shortname": "bridgek",
+      "longname": "clab-segw-sros-01-bridgek",
+      "fqdn": "bridgek.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgek",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgek",
+        "clab-node-name": "bridgek",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgew": {
+      "index": "12",
+      "shortname": "bridgew",
+      "longname": "clab-segw-sros-01-bridgew",
+      "fqdn": "bridgew.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgew",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgew",
+        "clab-node-name": "bridgew",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "bridgez": {
+      "index": "13",
+      "shortname": "bridgez",
+      "longname": "clab-segw-sros-01-bridgez",
+      "fqdn": "bridgez.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgez",
+      "kind": "bridge",
+      "image": "",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "",
+      "mgmt-ipv4-prefix-length": 0,
+      "mgmt-ipv6-address": "",
+      "mgmt-ipv6-prefix-length": 0,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "bridge",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/bridgez",
+        "clab-node-name": "bridgez",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "ixia-c": {
+      "index": "14",
+      "shortname": "ixia-c",
+      "longname": "clab-segw-sros-01-ixia-c",
+      "fqdn": "ixia-c.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/ixia-c",
+      "kind": "keysight_ixia-c-one",
+      "image": "ghcr.io/open-traffic-generator/ixia-c-one:0.0.1-3423",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "keysight_ixia-c-one",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/ixia-c",
+        "clab-node-name": "ixia-c",
+        "clab-node-type": "",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "srl1": {
+      "index": "15",
+      "shortname": "srl1",
+      "longname": "clab-segw-sros-01-srl1",
+      "fqdn": "srl1.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/srl1",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::9",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/srl1",
+        "clab-node-name": "srl1",
+        "clab-node-type": "ixrd2",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "srl2": {
+      "index": "16",
+      "shortname": "srl2",
+      "longname": "clab-segw-sros-01-srl2",
+      "fqdn": "srl2.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/srl2",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/srl2",
+        "clab-node-name": "srl2",
+        "clab-node-type": "ixrd2",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "srl3": {
+      "index": "17",
+      "shortname": "srl3",
+      "longname": "clab-segw-sros-01-srl3",
+      "fqdn": "srl3.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/srl3",
+      "kind": "srl",
+      "image": "ghcr.io/nokia/srlinux",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "srl",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/srl3",
+        "clab-node-name": "srl3",
+        "clab-node-type": "ixrd2",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "sros1": {
+      "index": "18",
+      "shortname": "sros1",
+      "longname": "clab-segw-sros-01-sros1",
+      "fqdn": "sros1.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros1",
+      "kind": "vr-sros",
+      "image": "vrnetlab/vr-sros:22.10.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "vr-sros",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros1",
+        "clab-node-name": "sros1",
+        "clab-node-type": "sr-1e",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "sros2": {
+      "index": "19",
+      "shortname": "sros2",
+      "longname": "clab-segw-sros-01-sros2",
+      "fqdn": "sros2.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros2",
+      "kind": "vr-sros",
+      "image": "vrnetlab/vr-sros:22.10.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "vr-sros",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros2",
+        "clab-node-name": "sros2",
+        "clab-node-type": "sr-1e",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "sros3": {
+      "index": "20",
+      "shortname": "sros3",
+      "longname": "clab-segw-sros-01-sros3",
+      "fqdn": "sros3.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros3",
+      "kind": "vr-sros",
+      "image": "vrnetlab/vr-sros:22.10.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "vr-sros",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros3",
+        "clab-node-name": "sros3",
+        "clab-node-type": "sr-1e",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    },
+    "sros4": {
+      "index": "21",
+      "shortname": "sros4",
+      "longname": "clab-segw-sros-01-sros4",
+      "fqdn": "sros4.segw-sros-01.io",
+      "group": "",
+      "labdir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros4",
+      "kind": "vr-sros",
+      "image": "vrnetlab/vr-sros:22.10.R1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-67dc84bbab5a",
+        "clab-node-group": "",
+        "clab-node-kind": "vr-sros",
+        "clab-node-lab-dir": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/clab-segw-sros-01/sros4",
+        "clab-node-name": "sros4",
+        "clab-node-type": "sr-1e",
+        "clab-topo-file": "/root/containerlab/fedelabs/nokia-sros-segw-ipsec-lab/nokia-sros-segw.clab.yml",
+        "containerlab": "segw-sros-01"
+      }
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:4d:18:f4",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgea",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:03:a9:93",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:79:00:11",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgea",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:5e:3d:8a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:66:f4:a0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgeb",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:9c:8b:7a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl2",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:a0:a1:c6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgeb",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:fc:37:10",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl2",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:cc:5b:69",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgec",
+        "interface": "eth5",
+        "mac": "aa:c1:ab:8e:36:2d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:eb:56:95",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgec",
+        "interface": "eth6",
+        "mac": "aa:c1:ab:62:a0:d1",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:4a:58:00",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridged",
+        "interface": "eth1d",
+        "mac": "aa:c1:ab:18:60:05",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:7f:e9:30",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridged",
+        "interface": "eth2d",
+        "mac": "aa:c1:ab:9a:0f:24",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:9f:32:b6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgee",
+        "interface": "eth1e",
+        "mac": "aa:c1:ab:08:1a:35",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl2",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:fe:1c:31",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgee",
+        "interface": "eth2e",
+        "mac": "aa:c1:ab:72:f7:ab",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:fa:41:7e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgef",
+        "interface": "eth1f",
+        "mac": "aa:c1:ab:97:35:45",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl1",
+        "interface": "e1-4",
+        "mac": "aa:c1:ab:3e:42:e2",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgef",
+        "interface": "eth2f",
+        "mac": "aa:c1:ab:f1:9c:c2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:f6:a6:b5",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgeg",
+        "interface": "eth1g",
+        "mac": "aa:c1:ab:54:25:cc",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl2",
+        "interface": "e1-4",
+        "mac": "aa:c1:ab:65:e9:05",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgeg",
+        "interface": "eth2g",
+        "mac": "aa:c1:ab:08:46:22",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl3",
+        "interface": "e1-1",
+        "mac": "aa:c1:ab:f5:4a:84",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgei",
+        "interface": "eth1i",
+        "mac": "aa:c1:ab:a4:1d:65",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl3",
+        "interface": "e1-2",
+        "mac": "aa:c1:ab:63:bd:b0",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgej",
+        "interface": "eth1j",
+        "mac": "aa:c1:ab:09:c7:43",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "srl3",
+        "interface": "e1-3",
+        "mac": "aa:c1:ab:89:db:22",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgek",
+        "interface": "eth1k",
+        "mac": "aa:c1:ab:c9:d8:4b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:d4:5e:a8",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgei",
+        "interface": "eth2i",
+        "mac": "aa:c1:ab:b0:28:8f",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:22:a6:04",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgej",
+        "interface": "eth2j",
+        "mac": "aa:c1:ab:55:dc:21",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros3",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:4f:6d:15",
+        "peer": "z"
+      },
+      "z": {
+        "node": "bridgek",
+        "interface": "eth2k",
+        "mac": "aa:c1:ab:ee:fb:39",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridgew",
+        "interface": "eth1w",
+        "mac": "aa:c1:ab:7d:94:ed",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srl1",
+        "interface": "e1-5",
+        "mac": "aa:c1:ab:8f:74:af",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridgez",
+        "interface": "eth1z",
+        "mac": "aa:c1:ab:a1:0e:aa",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srl2",
+        "interface": "e1-5",
+        "mac": "aa:c1:ab:50:e7:01",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridgew",
+        "interface": "eth2w",
+        "mac": "aa:c1:ab:78:5c:89",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sros4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a6:2f:bf",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridgez",
+        "interface": "eth2z",
+        "mac": "aa:c1:ab:23:1d:2d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sros4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:36:b7:2a",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "sros1",
+        "interface": "eth5",
+        "mac": "aa:c1:ab:63:64:69",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sros4",
+        "interface": "eth5",
+        "mac": "aa:c1:ab:63:10:34",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridge-tg",
+        "interface": "eth-tg1",
+        "mac": "aa:c1:ab:83:ab:5f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "srl3",
+        "interface": "e1-5",
+        "mac": "aa:c1:ab:14:95:a0",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridge-tg",
+        "interface": "eth-tg2",
+        "mac": "aa:c1:ab:b5:0c:9e",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ixia-c",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:32:5f:ee",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridge-tg2",
+        "interface": "eth-tg3",
+        "mac": "aa:c1:ab:71:10:6b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "ixia-c",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:84:a6:60",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "bridge-tg2",
+        "interface": "eth-tg4",
+        "mac": "aa:c1:ab:6a:8c:fb",
+        "peer": "z"
+      },
+      "z": {
+        "node": "sros4",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:06:6a:4a",
+        "peer": "a"
+      }
+    }
+  ]
+}
