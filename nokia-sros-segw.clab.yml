@@ -1,0 +1,137 @@
+#topology documentation: http://containerlab.dev/lab-examples/srl-ceos/
+name: segw-sros-01 
+
+topology:
+  nodes:
+    srl1:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+    srl2:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+    srl3:
+      kind: srl
+      image: ghcr.io/nokia/srlinux
+
+    sros1:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:22.10.R1  # internal image, external users should build/use their own image
+      type: sr-1e
+      license: license-sros22.txt  # license file must be obtained from Nokia 
+      startup-config: ./configs/sros1.cfg
+      env:
+        # boot delay in seconds
+        BOOT_DELAY: 30
+
+    sros2:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:22.10.R1
+      type: sr-1e
+      license: license-sros22.txt
+      startup-config: ./configs/sros2.cfg
+      env:
+        # boot delay in seconds
+        BOOT_DELAY: 90
+
+    sros3:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:22.10.R1
+      type: sr-1e
+      license: license-sros22.txt
+      startup-config: ./configs/sros3.cfg
+      env:
+        # boot delay in seconds
+        BOOT_DELAY: 150
+      
+
+    sros4:
+      kind: vr-sros
+      image: vrnetlab/vr-sros:22.10.R1
+      type: sr-1e
+      license: license-sros22.txt
+      startup-config: ./configs/sros4.cfg
+      env:
+        # boot delay in seconds
+        BOOT_DELAY: 210
+    
+    ixia-c:
+      kind: keysight_ixia-c-one
+      image: ghcr.io/open-traffic-generator/ixia-c-one:0.0.1-3423
+      exec:
+        - "./ifcfg add eth1 10.1.1.1 24" # modify accordingly and don't forget MAC addresses in the otg script 
+        - "./ifcfg add eth2 10.2.2.1 24"
+
+    bridgea:
+      kind: bridge # to be crated separately (nmcli, brctl, shell script, depends on your distribution) 
+    bridgeb:
+      kind: bridge
+    bridgec:
+      kind: bridge
+    bridged:
+      kind: bridge
+    bridgee:
+      kind: bridge
+    bridgef:
+      kind: bridge
+    bridgeg:
+      kind: bridge
+    bridgei:
+      kind: bridge
+    bridgej:
+      kind: bridge
+    bridgek:
+      kind: bridge
+    bridgew:
+      kind: bridge
+    bridgez:
+      kind: bridge
+    bridge-tg:
+      kind: bridge
+    bridge-tg2:
+      kind: bridge
+
+
+ 
+  links:
+    - endpoints: ["srl1:e1-2", "bridgea:eth1"]
+    - endpoints: ["sros1:eth1", "bridgea:eth2"] 
+    ##    
+    - endpoints: ["srl1:e1-1", "bridgeb:eth3"]
+    - endpoints: ["srl2:e1-1", "bridgeb:eth4"]
+    ##
+    - endpoints: ["srl2:e1-2", "bridgec:eth5"]
+    - endpoints: ["sros1:eth2", "bridgec:eth6"]
+    ##
+    - endpoints: ["sros2:eth1", "bridged:eth1d"] 
+    - endpoints: ["srl1:e1-3", "bridged:eth2d"]
+    - endpoints: ["sros2:eth2", "bridgee:eth1e"]
+    - endpoints: ["srl2:e1-3", "bridgee:eth2e"]
+    ## 
+    - endpoints: ["sros3:eth1", "bridgef:eth1f"]
+    - endpoints: ["srl1:e1-4", "bridgef:eth2f"]
+    - endpoints: ["sros3:eth2", "bridgeg:eth1g"]
+    - endpoints: ["srl2:e1-4", "bridgeg:eth2g"]
+    ##
+    - endpoints: ["srl3:e1-1", "bridgei:eth1i"]
+    - endpoints: ["srl3:e1-2", "bridgej:eth1j"]
+    - endpoints: ["srl3:e1-3", "bridgek:eth1k"]
+    ##
+    - endpoints: ["sros1:eth3", "bridgei:eth2i"]
+    - endpoints: ["sros2:eth3", "bridgej:eth2j"]
+    - endpoints: ["sros3:eth3", "bridgek:eth2k"]
+    ##
+    - endpoints: ["bridgew:eth1w", "srl1:e1-5"]
+    - endpoints: ["bridgez:eth1z", "srl2:e1-5"]
+    - endpoints: ["bridgew:eth2w", "sros4:eth1"]
+    - endpoints: ["bridgez:eth2z", "sros4:eth2"]
+    ##direct link sros4-sros1
+    - endpoints: ["sros1:eth5", "sros4:eth5"]
+
+    ##
+    - endpoints: ["bridge-tg:eth-tg1", "srl3:e1-5"]
+    - endpoints: ["bridge-tg:eth-tg2", "ixia-c:eth2"]
+    - endpoints: ["bridge-tg2:eth-tg3","ixia-c:eth1"]
+    - endpoints: ["bridge-tg2:eth-tg4","sros4:eth3"]
+
+
+
