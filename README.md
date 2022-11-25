@@ -277,9 +277,24 @@ And eventually, tunnels on sros3 are back into "Dormant" status, script ends nor
 -- test finished ! --
 ```
 
+### Automated configuration of tunnels
 
+As seen above, multiple tunnels are required to properly test failover scenarios and/or throughput, especially in a real setup with physical hardware. In order to ease this task, a new script has been added on the repo.
 
-**That's a wrap!** 
+The `auto_add_tunnels_v0.py` script works over the sros4 helper node (but target IP can be easily changed from the script itself) and takes a csv file as input, an example is given in `auto_add_tunnels_file.csv`. Format of csv file is self-explanatory (well, almost):
+
+```
+> cat auto_add_tunnels_file.csv
+vprn_id,int_name,ip_address,prefix_len,sap_id_tg1,vprn_id_priv,sec_pol_id,loc_ip_addr,rem_ip_addr,int_name_priv,tunn_name,ixia-ip1,ixia-ip2,
+100,STATIC-AUTO-1000,172.16.180.1,24,1801,200,180,10.10.180.0/24,200.1.1.0/28,STATIC-AUTO-1000PRV,HELP-AUTO-TUNN1000,10.1.1.1,200.1.1.1/32,
+100,STATIC-AUTO-1001,172.16.181.1,24,1802,200,181,10.10.181.0/24,200.1.1.0/28,STATIC-AUTO-1001PRV,HELP-AUTO-TUNN1001,10.1.1.1,200.1.1.2/32,
+```
+
+Running the script with csv file as single argument runs a sequence of `gnmic` commands on the host CLI, when script execution is completed you will get both private and public side configuration of static tunnels on sros4, what you still need to do is to:
+
+1. configure the `otg-gtpv1-upanddown_v0.py` script with inner addresses accordingly to the csv file (loc_ip_addr and rem_ip_addr)
+2. take care of routing because srl3 node needs proper configuration to deal with newly configured (private side) addresses.  
+
+**That's a wrap!**
 
 ![a diagram is provided for reference](./docs/sheldon.jpg)
-

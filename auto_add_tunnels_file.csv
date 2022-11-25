@@ -1,0 +1,3 @@
+vprn_id,int_name,ip_address,prefix_len,sap_id_tg1,vprn_id_priv,sec_pol_id,loc_ip_addr,rem_ip_addr,int_name_priv,tunn_name,ixia-ip1,ixia-ip2,
+100,STATIC-AUTO-1000,172.16.180.1,24,1801,200,180,10.10.180.0/24,200.1.1.0/28,STATIC-AUTO-1000PRV,HELP-AUTO-TUNN1000,10.1.1.1,200.1.1.1/32,
+100,STATIC-AUTO-1001,172.16.181.1,24,1802,200,181,10.10.181.0/24,200.1.1.0/28,STATIC-AUTO-1001PRV,HELP-AUTO-TUNN1001,10.1.1.1,200.1.1.2/32,
